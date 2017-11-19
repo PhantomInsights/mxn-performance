@@ -40,13 +40,13 @@ In the next figure we can observe how the Mexican Peso performed against other 5
 
 | Code | Name | Initial Value | Latest Value | Percentage Change | Min | Max | Mean |
 | ---- |:---------------------|------:|------:|--------:|-----:|------:|------:|
-| ARS  | Argentinian Peso     |  3.45 |  1.08 |  68.50% | 1.02 |  4.15 |  2.46 |
+| ARS  | Argentine Peso       |  3.45 |  1.08 |  68.50% | 1.02 |  4.15 |  2.46 |
 | AUD  | Australian Dollar    |  9.46 | 14.61 | -54.36% | 8.62 | 15.91 | 12.22 |
 | BRL  | Brazilian Real       |  6.07 |  5.82 |   4.13% | 4.27 |  7.67 |  6.20 |
 | CAD  | Canadian Dollar      | 10.82 | 14.98 | -38.52% | 9.60 | 16.15 | 12.53 |
 | CNY  | Chinese Yuan         |  1.47 |  2.88 | -95.99% | 1.47 |  3.09 |  2.16 |
 
-The Mexican Peso got stronger against the Argentinian Peso (now you know where to vacation).
+The Mexican Peso got stronger against the Argentine Peso (now you know where to vacation).
 
 Similar to the Swiss Franch, the Chinese Yuan costs the double compared to the starting price.
 
@@ -66,4 +66,4 @@ The following headlines summarize the events of January 2017 that could have aff
 
 [Source](https://en.wikipedia.org/wiki/Portal:Current_events/January_2017)
 
-In conclusion, the Mexican Peso has depreciated significantly in the last 7 years but it is also important to note that it has gotten stronger against other currencies which means it hasn't devaluated, only depreciated against the top currencies belonging to countries that are perceived as safer to invest in.
+In conclusion, the Mexican Peso has depreciated significantly in the last 7 years but it is also important to note that it has gotten stronger against other currencies which means it only depreciated against the top currencies belonging to countries that are perceived as safer to invest in.
