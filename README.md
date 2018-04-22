@@ -8,9 +8,9 @@ To accomplish this I gathered historical data from the last 120 months. Each mon
 
 The following charts and insights are presented from the Mexican Peso perspective, positive percentage values mean that the Mexican Peso got stronger and negative percent values mean that it got weaker.
 
-The higher the number on the Initial Value, Latest Value, Min, Max and Mean, means the more Mexican Pesos are used to buy other currencies.
+The higher the number is on the Initial Value, Latest Value, Min, Max and Mean, means the more Mexican Pesos are needed to buy other currencies.
 
-The data covers all exchange rates between December 2008 to November 2017.
+The data covers all exchange rates between April 2008 to April 2018.
 
 The insights and charts from this document were generated using the `pandas` and `matplotllb` libraries from the `Python` programming language.
 
