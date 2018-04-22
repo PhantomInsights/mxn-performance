@@ -24,11 +24,11 @@ In the following figure we will observe how the Mexican Peso has performed again
 
 | Code | Name | Initial Value | Latest Value | Percentage Change | Min | Max | Mean |
 | ---- |:---------------------|------:|------:|---------:|------:|------:|------:|
-| CHF  | Swiss Franc          |  9.51 | 19.18 | -101.58% | 9.34  | 21.17 | 14.50 |
-| EUR  | Euro                 | 15.79 | 22.29 |  -41.17% | 15.14 | 22.68 | 17.96 |
-| GBP  | Great Britain Pound  | 21.91 | 25.12 |  -14.68% | 18.67 | 26.60 | 21.71 |
-| JPY  | Japanese Yen         |  0.09 |  0.16 |  -74.33% |  0.09  | 0.18 |  0.14 |
-| USD  | United States Dollar | 10.84 | 19.11 |  -76.24% | 10.10 | 21.34 | 14.16 |
+| CHF | Swiss Franc          | 10.21 | 18.93 | -0.85% | 9.34 | 21.17 | 14.86 |
+| EUR | Euro                 | 16.50 | 22.44 | -0.36% | 15.15 | 23.07 | 18.22 |
+| GBP | Great Britain Pound  | 20.77 | 25.76 | -0.24% | 18.67 | 26.60 | 21.90 |
+| JPY | Japanese Yen         | 0.10 | 0.17 | -0.69% | 0.09 | 0.19 | 0.15 |
+| USD | United States Dollar | 10.48 | 18.21 | -0.74% | 10.10 | 21.35 | 14.46 |
 
 The Mexican Peso lost against all the top 5 currencies. It lost the most against the Swiss Franc, it now costs the double to buy one.
 
@@ -40,11 +40,11 @@ In the next figure we can observe how the Mexican Peso performed against other 5
 
 | Code | Name | Initial Value | Latest Value | Percentage Change | Min | Max | Mean |
 | ---- |:---------------------|------:|------:|--------:|-----:|------:|------:|
-| ARS  | Argentine Peso       |  3.45 |  1.08 |  68.50% | 1.02 |  4.15 |  2.46 |
-| AUD  | Australian Dollar    |  9.46 | 14.61 | -54.36% | 8.62 | 15.91 | 12.22 |
-| BRL  | Brazilian Real       |  6.07 |  5.82 |   4.13% | 4.27 |  7.67 |  6.20 |
-| CAD  | Canadian Dollar      | 10.82 | 14.98 | -38.52% | 9.60 | 16.15 | 12.53 |
-| CNY  | Chinese Yuan         |  1.47 |  2.88 | -95.99% | 1.47 |  3.09 |  2.16 |
+| ARS  | Argentine Peso       | 3.30 | 0.90 | 0.73% | 0.90 | 4.15 | 2.37 |
+| AUD  | Australian Dollar    | 9.85 | 14.06 | -0.43% | 8.63 | 15.91 | 12.40 |
+| BRL  | Brazilian Real       | 6.27 | 5.39 | 0.14% | 4.28 | 7.68 | 6.18 |
+| CAD  | Canadian Dollar      | 10.34 | 14.34 | -0.39% | 9.60 | 16.16 | 12.69 |
+| CNY  | Chinese Yuan         | 1.50 | 2.89 | -0.93% | 1.47 | 3.10 | 2.22 |
 
 The Mexican Peso got stronger against the Argentine Peso (now you know where to vacation).
 
