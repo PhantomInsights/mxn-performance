@@ -58,10 +58,9 @@ def generate_fig(pairs, file_name):
 
         initial_value = resampled_df["inverse"].iloc[0]
 
-        growth_ratios = [(item - initial_value) / initial_value * -
-                         100 for item in resampled_df["inverse"]]
+        pct_changes = [(item - initial_value) / initial_value * -100 for item in resampled_df["inverse"]]
 
-        plt.plot(resampled_df.index, growth_ratios, label=pair[1], linewidth=1.5)
+        plt.plot(resampled_df.index, pct_changes, label=pair[1], linewidth=1.5)
 
     plt.ylabel("Percent Change")
     plt.title("Mexican Peso Performance")
