@@ -3,8 +3,6 @@ This script gives us the max, min and average.
 The pairs list is shared from the other files.
 """
 
-from datetime import datetime
-
 import pandas as pd
 
 # We declare in our list the pairs we need.
@@ -26,8 +24,10 @@ pairs = [
 
 def get_insights(pair):
     """Converts the .csv into a pandas Dataframe and gets the insights.
-    In this project, the data was resampled to 1 month intervals.
-    Then the values were formatted for Markdown.
+    
+    In this project the data wis resampled to 1 month intervals.
+    
+    Finally, the values are formatted into Markdown.
 
     Parameters
     ----------
