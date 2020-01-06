@@ -24,30 +24,29 @@ pairs = [
 ]
 
 
-def date_converter(value):
-    """Converts the UNIX timestamp to a datetime object."""
-
-    return datetime.utcfromtimestamp(float(int(value) / 1000))
-
-
 def get_insights(pair):
-    """
-    Converts the .csv into a pandas Dataframe and gets the insights.
+    """Converts the .csv into a pandas Dataframe and gets the insights.
     In this project, the data was resampled to 1 month intervals.
     Then the values were formatted for Markdown.
+
+    Parameters
+    ----------
+    pair : tuple
+        A tuple of 2 strings representing the currencies pair.
+
     """
 
-    df = pd.read_csv("{}{}.csv".format(pair[0], pair[1]), header=None, names=[
-                     "timestamp", "rate", "inversed"], converters={"timestamp": date_converter})
+    df = pd.read_csv("{}{}.csv".format(
+        pair[0], pair[1]), parse_dates=["datetime"], index_col="datetime")
 
-    resampled_df = df.resample("M", on="timestamp").mean().reset_index()
+    resampled_df = df.resample("M").mean()
 
-    initial_value = resampled_df["rate"].iloc[0]
-    latest_value = resampled_df["rate"].iloc[-1]
-    percentage_change = (latest_value - initial_value) / initial_value * -1
-    min_value = resampled_df["rate"].min()
-    max_value = resampled_df["rate"].max()
-    mean_value = resampled_df["rate"].mean()
+    initial_value = resampled_df["inverse"].iloc[0]
+    latest_value = resampled_df["inverse"].iloc[-1]
+    percentage_change = (latest_value - initial_value) / initial_value * -100
+    min_value = resampled_df["inverse"].min()
+    max_value = resampled_df["inverse"].max()
+    mean_value = resampled_df["inverse"].mean()
 
     final_string = "| {} | {:.2f} | {:.2f} | {:.2f}% | {:.2f} | {:.2f} | {:.2f} |".format(
         pair[1], initial_value, latest_value, percentage_change, min_value, max_value, mean_value)

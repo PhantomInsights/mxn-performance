@@ -7,6 +7,9 @@ from datetime import datetime
 
 import matplotlib.pyplot as plt
 import pandas as pd
+from pandas.plotting import register_matplotlib_converters
+
+register_matplotlib_converters()
 
 plt.rcParams["figure.figsize"] = [12, 7]
 plt.style.use("fivethirtyeight")
@@ -32,29 +35,33 @@ popular_pairs = [
 ]
 
 
-def date_converter(value):
-    """Converts the UNIX timestamp to a datetime object."""
-
-    return datetime.utcfromtimestamp(float(int(value) / 1000))
-
-
 def generate_fig(pairs, file_name):
-    """
-    Converts the .csv into a pandas Dataframe and plots the relevant data.
+    """Converts the .csv into a pandas Dataframe and plots the relevant data.
     In this project, the data was resampled to 1 month intervals.
+
+    Parameters
+    ----------
+    pair : tuple
+        A tuple of 2 strings representing the currencies pair.
+
+    file_name : str
+        The path of the file.
+
     """
 
     for pair in pairs:
 
-        df = pd.read_csv("{}{}.csv".format(pair[0], pair[1]), header=None, names=[
-                         "timestamp", "rate", "inversed"], converters={"timestamp": date_converter})
-        resampled_df = df.resample("M", on="timestamp").mean().reset_index()
+        df = pd.read_csv("{}{}.csv".format(pair[0], pair[1]), parse_dates=[
+                         "datetime"], index_col="datetime")
 
-        initial_value = resampled_df["rate"].iloc[0]
-        growth_ratios = [(item - initial_value) / initial_value *
-                         100 * -1 for item in resampled_df["rate"]]
-        
-        plt.plot(resampled_df["timestamp"], growth_ratios, label=pair[1])
+        resampled_df = df.resample("M").mean()
+
+        initial_value = resampled_df["inverse"].iloc[0]
+
+        growth_ratios = [(item - initial_value) / initial_value * -
+                         100 for item in resampled_df["inverse"]]
+
+        plt.plot(resampled_df.index, growth_ratios, label=pair[1], linewidth=1.5)
 
     plt.ylabel("Percent Change")
     plt.title("Mexican Peso Performance")

@@ -2,6 +2,7 @@
 
 import csv
 import time
+from datetime import datetime
 
 import requests
 
@@ -30,11 +31,18 @@ def download_data(pair):
     with requests.get(url.format(pair[0], pair[1])) as response:
 
         with open("{}{}.csv".format(pair[0], pair[1]), "w", encoding="utf-8", newline="") as temp_file:
-
+            
             writer = csv.writer(temp_file)
+            data_list = [["datetime", "rate", "inverse"]]
 
             for item in response.json()["HistoricalPoints"]:
-                writer.writerow([item["PointInTime"], item["InverseInterbankRate"], item["InterbankRate"]])
+
+                iso_date = datetime.fromtimestamp(int(item["PointInTime"]) / 1000)
+
+                data_list.append(
+                    [iso_date,  item["InterbankRate"], item["InverseInterbankRate"]])
+
+            writer.writerows(data_list)
 
 
 if __name__ == "__main__":
