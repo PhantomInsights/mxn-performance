@@ -47,9 +47,7 @@ In the next figure we can observe how the Mexican Peso performed against other 5
 | CAD | Canadian Dollar | 12.27 | 14.54 | -18.53% | 11.49 | 16.17 | 13.29 |
 | CNY | Chinese Yuan | 1.88 | 2.71 | -44.50% | 1.79 | 3.13 | 2.40 |
 
-The Mexican Peso got stronger against the Argentine Peso, it almost doubled in value.
-
-Similarly, the Brazilian Real lost one third of its value against the Mexican Peso.
+The Mexican Peso got significantly stronger against the Argentine Peso, similarly, the Brazilian Real lost one third of its value against the Mexican Peso.
 
 There is something in common in both charts, at the beginning of 2017 the Mexican Peso got significanly weaker against most other currencies.
 
