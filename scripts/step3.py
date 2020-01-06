@@ -3,8 +3,6 @@ In this step we generate charts from our data.
 This file has similar code from step2.py
 """
 
-from datetime import datetime
-
 import matplotlib.pyplot as plt
 import pandas as pd
 from pandas.plotting import register_matplotlib_converters
@@ -37,7 +35,7 @@ popular_pairs = [
 
 def generate_fig(pairs, file_name):
     """Converts the .csv into a pandas Dataframe and plots the relevant data.
-    In this project, the data was resampled to 1 month intervals.
+    In this project the data is resampled to 1 month intervals.
 
     Parameters
     ----------
@@ -45,7 +43,7 @@ def generate_fig(pairs, file_name):
         A tuple of 2 strings representing the currencies pair.
 
     file_name : str
-        The path of the file.
+        The file name of the generated figure.
 
     """
 
