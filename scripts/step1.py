@@ -1,4 +1,6 @@
-"""This script will connect to the OFX public API, download the data and convert it to .csv"""
+"""
+This script will connect to the OFX public API, download the data and convert it to .csv
+"""
 
 import csv
 import time
@@ -30,19 +32,18 @@ def download_data(pair):
 
     with requests.get(url.format(pair[0], pair[1])) as response:
 
+        data_list = [["datetime", "rate", "inverse"]]
+
+        for item in response.json()["HistoricalPoints"]:
+
+            iso_date = datetime.fromtimestamp(
+                int(item["PointInTime"]) / 1000)
+
+            data_list.append(
+                [iso_date,  item["InterbankRate"], item["InverseInterbankRate"]])
+
         with open("{}{}.csv".format(pair[0], pair[1]), "w", encoding="utf-8", newline="") as temp_file:
-            
-            writer = csv.writer(temp_file)
-            data_list = [["datetime", "rate", "inverse"]]
-
-            for item in response.json()["HistoricalPoints"]:
-
-                iso_date = datetime.fromtimestamp(int(item["PointInTime"]) / 1000)
-
-                data_list.append(
-                    [iso_date,  item["InterbankRate"], item["InverseInterbankRate"]])
-
-            writer.writerows(data_list)
+            csv.writer(temp_file).writerows(data_list)
 
 
 if __name__ == "__main__":
